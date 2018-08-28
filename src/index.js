@@ -1,6 +1,8 @@
-import express from 'express';
-const app = express();
+import bluebird from 'bluebird';
+import redis from 'redis';
+import { receive } from './gomoku/server';
 
-app.get('/api', (req, res) => res.send('helloooo'));
+bluebird.promisifyAll(redis.RedisClient.prototype);
+bluebird.promisifyAll(redis.Multi.prototype);
 
-app.listen(3000, () => console.log('Running on localhost:3000'));
+receive();
