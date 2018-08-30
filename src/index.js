@@ -1,13 +1,14 @@
 import bluebird from 'bluebird';
 import redis from 'redis';
 import { receive } from './amqp';
-import { connect } from './mongo';
+import express from 'express';
+import * as mongo from './mongo';
 
-// redis mongo
+// const app = express();
 
-// bluebird.promisifyAll(redis.RedisClient.prototype);
-// bluebird.promisifyAll(redis.Multi.prototype);
+// app.get('/api/user', (req, res) => res.send(false));
+// app.get('/api/games', (req, res) => res.send({}));
 
-// receive();
+// app.listen(3003, () => console.log('listening on 3003'));
 
-connect();
+mongo.matchResult('a', 'black', 'win').then(console.log);
