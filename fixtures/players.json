@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "username": "playerone",
+        "online": false,
+        "last_online": "2016-05-18T16:00:00Z"
+    },
+    {
+        "id": 2,
+        "username": "playertwo",
+        "online": false,
+        "last_online": "2017-02-14T13:00:00Z"
+    },
+    {
+        "id": 3,
+        "username": "playerthree",
+        "online": false,
+        "last_online": "2018-01-08T05:00:00Z"
+    }
+]

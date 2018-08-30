@@ -1,0 +1,38 @@
+[
+    {
+        "type": "black",
+        "player_id": 1,
+        "wins": 4,
+        "losses": 2
+    },
+    {
+        "type": "white",
+        "player_id": 1,
+        "wins": 3,
+        "losses": 3
+    },
+    {
+        "type": "black",
+        "player_id": 2,
+        "wins": 3,
+        "losses": 1
+    },
+    {
+        "type": "white",
+        "player_id": 2,
+        "wins": 4,
+        "losses": 5
+    },
+    {
+        "type": "black",
+        "player_id": 3,
+        "wins": 4,
+        "losses": 7
+    },
+    {
+        "type": "white",
+        "player_id": 3,
+        "wins": 2,
+        "losses": 0
+    }
+]
