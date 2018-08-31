@@ -60,7 +60,7 @@ const failureWrapper = (error) => {
 
 // ------------------------------------------------ public methods
 
-export async function createUser(username) { // rabbit, tested
+export async function createUser(username) {
     const player = await getPlayer(username);
     if (player.length) {
         return failureWrapper(new Error('username already exists'));
@@ -123,7 +123,7 @@ export async function getPlayerData(username) {
     
 }
 
-export async function matchResult(username, colour, result) { // rabbit, tested
+export async function matchResult(username, colour, result) {
     const player = await getPlayer(username);
     if (!player.length)
             return failureWrapper(new Error('player does not exist'));
@@ -147,7 +147,7 @@ export async function matchResult(username, colour, result) { // rabbit, tested
     }).catch(failureWrapper);
 };
 
-export async function getNumberPlayersOnline() { // rabbit, tested
+export async function getNumberPlayersOnline() {
     try {
         const players = await getAllPlayers();
         let total = 0;
@@ -164,7 +164,7 @@ export async function getNumberPlayersOnline() { // rabbit, tested
     }
 };
 
-export async function updatePlayerAction(username) { //rabbit, tested
+export async function updatePlayerAction(username) {
     const player = await getPlayer(username);
     if (!player.length)
         return failureWrapper(new Error('player does not exist'));
