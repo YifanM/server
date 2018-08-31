@@ -1,6 +1,6 @@
 import bluebird from 'bluebird';
 import redis from 'redis';
-import { receive } from './amqp';
+import { send, receive } from './amqp';
 import express from 'express';
 import * as mongo from './mongo';
 
@@ -31,3 +31,6 @@ app.get('/api/games', async (req, res) => {
 });
 
 app.listen(3003, () => console.log('listening on 3003'));
+
+receive();
+console.log('rabbit is listening');

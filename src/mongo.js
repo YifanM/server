@@ -97,7 +97,7 @@ export async function createUser(username) { // rabbit, tested
     });
 };
 
-export async function getPlayerData(username) { // express, tested
+export async function getPlayerData(username) {
     try {
         const player = await getPlayer(username);
         if (!player.length)
@@ -178,7 +178,7 @@ export async function updatePlayerAction(username) { //rabbit, tested
     }).catch(failureWrapper);
 };
 
-export async function doesUserExist(username) { // express, tested
+export async function doesUserExist(username) {
     try {
         const players = await getPlayer(username);
         return successWrapper(players && players.length >= 1);
