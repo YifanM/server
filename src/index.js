@@ -3,8 +3,10 @@ import redis from 'redis';
 import { send, receive } from './amqp';
 import express from 'express';
 import * as mongo from './mongo';
+import cors from 'cors';
 
 const app = express();
+app.use(cors({ origin: true }));
 
 app.get('/api/user', async (req, res) => {
     const username = req.query.username;
